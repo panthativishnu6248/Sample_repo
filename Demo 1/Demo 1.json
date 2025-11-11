@@ -1,0 +1,34 @@
+{
+  "name" : "Demo 1",
+  "jobMode" : "SCRIPT",
+  "description" : "",
+  "role" : "arn:aws:iam::039612841376:role/glue_iam",
+  "executionProperty" : {
+    "maxConcurrentRuns" : 1
+  },
+  "command" : {
+    "name" : "pythonshell",
+    "scriptLocation" : "s3://aws-glue-assets-039612841376-eu-north-1/scripts/Demo 1.py",
+    "pythonVersion" : "3.9"
+  },
+  "defaultArguments" : {
+    "--enable-job-insights" : "false",
+    "--Test_param" : "Python Demo",
+    "--enable-observability-metrics" : "false",
+    "--enable-glue-datacatalog" : "true",
+    "library-set" : "analytics",
+    "--job-language" : "python",
+    "--TempDir" : "s3://aws-glue-assets-039612841376-eu-north-1/temporary/"
+  },
+  "maxRetries" : 0,
+  "allocatedCapacity" : 0,
+  "timeout" : 2880,
+  "maxCapacity" : 0.0625,
+  "glueVersion" : "3.0",
+  "sourceControlDetails" : {
+    "provider" : "GITHUB",
+    "repository" : "Sample_repo",
+    "branch" : "main",
+    "folder" : "Demo 1"
+  }
+}
